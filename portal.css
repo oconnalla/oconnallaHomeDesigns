@@ -1,0 +1,261 @@
+html, body{
+    min-height:100%;
+}
+body{
+    background-image: url('livingRoom.jpg');
+    background-repeat: repeat;
+    background-size:cover;
+    background-position: center top;
+    font-family: 'Raleway', sans-serif;
+}
+#landingPageButton{
+    margin-left:48%;
+    background:rgba(51, 161, 173, .7);
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+  #landingPageButton:hover{
+    background:#fff;
+    color:rgb(51, 161, 173);
+    margin-left:50%;
+  }
+  #landingPageButton:before,#landingPageButton:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: rgba(22, 136, 148, 0.7);
+    transition:400ms ease all;
+  }
+  #landingPageButton:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  #landingPageButton:hover:before,#landingPageButton:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  #landingPageButton a{
+    text-decoration: none;
+    color:#fff;
+  }
+    #landingPageButton a:hover{
+    text-decoration: none;
+    color:rgba(22, 136, 148, 0.9);
+  }
+  #landingGreeting{
+    margin-left:20%;
+    margin-top: 7%;
+    font-family: 'Tangerine', cursive;
+    font-weight: lighter;
+    font-size: 120px;
+  }
+  .container{
+    min-height:100%;
+  }
+  nav ul li{
+    list-style-type: none;
+    text-decoration: none; 
+  }
+  nav a{
+     color:black;
+     text-decoration: none;
+     font-family: 'Raleway', sans-serif;  
+  }
+  #aboutMeDiv{
+      width:43%;
+      padding:10px;
+      margin-left:.5%;
+      border: 8px double rgba(242, 147, 191, 0.2);
+      overflow:auto;
+  }
+  #aboutMeH1{
+    margin-top:15%;
+    font-size: 70px;;
+    font-family: 'Tangerine', cursive;
+    font-weight: lighter;
+    margin-bottom:0px;
+  }
+  #nameEl{
+    margin:0px;
+    margin-bottom:10%;
+    color:rgb(242, 147, 191);
+    font-weight: lighter;
+  }
+  #arielPhoto{
+    height: 200px;
+    float:left;
+    padding:5px;
+    border: 6px double rgba(242, 147, 191, 0.1);
+    border-radius:50%;
+  }
+  #aboutMeDiv p{
+      padding-bottom:5px;
+      clear:both;
+  }
+  #myLanguagesP{
+    margin-bottom:0px;
+    margin-top:0px;
+    float:right;
+  }
+  footer a{
+    text-decoration: none;
+    color:black;
+  }
+
+  /* navigation bar, responsive by going to side when on cell screen */
+  ul.topnav {
+    margin-bottom: 1%;
+    padding: 0;
+    overflow: hidden;
+    width:55%;
+  }
+  
+  ul.topnav li {float: left;}
+  
+  ul.topnav li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 9px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li a:hover:not(.active) {
+      background-color: rgba(242, 147, 191, 0.8);
+      color:white;
+    }
+  
+  ul.topnav li a.active {
+      background-color: rgb(242, 147, 191);
+      color:white;
+    }
+  
+  ul.topnav li.right {
+      float: right;
+    }
+    #devJoke{
+        height:100px;
+        float:right;
+        margin-right:8%;
+    }
+    #officeNotebook{
+        display:none;
+    }
+    footer{
+        min-width:99%;
+        text-align: center;
+        bottom:0;
+        background-color: rgba(255, 255, 255, 0.7);
+        margin:auto;
+        clear:both;
+        position:absolute;   
+    }
+  
+  @media screen and (max-width: 600px) {
+    body{
+        background-size:auto;
+       
+    }
+    ul.topnav li.right, ul.topnav li {
+      float: none;
+    }
+    ul.topnav {
+       width:100%;
+       background-color: rgba(255, 255, 255, 0.7);
+       margin:auto;
+       margin-bottom:20%;
+       
+    }
+
+    #aboutMeDiv{
+        width:90%;
+        background-color: rgba(255, 255, 255, 0.25);
+        margin:auto;
+        border:none;
+        text-align: center;
+  
+    }
+    #aboutMeDiv img{
+      float:none;
+    }
+    #aboutMeDiv p{
+        background-color: rgba(255, 255, 255, 0.7);
+        padding:5%;
+        margin:auto;
+        margin-top: 5%;
+        border: 8px double rgba(242, 147, 191, 0.5);
+        float:none;
+    }
+    #myLanguagesP{
+      margin:auto;
+      margin-top:2%;
+      line-height: 2rem;
+      text-align:center;
+      font-size: 1.1rem;
+      margin-bottom:50px;
+    }
+    #nameEl{
+      background-image: linear-gradient(to bottom right, white, rgba(242, 147, 191, 0.6));
+      color:black;
+    }
+    #devJoke{
+        display:none;
+    }
+    #notebookBorder{
+      margin:auto;
+    }
+    #officeNotebook{
+        display: block;
+        width: 80%;
+        padding:2.5%;
+        margin:auto;
+        margin-top:0;
+        margin-bottom:10%;
+        border: 6px double rgba(242, 147, 191, 0.6);
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    footer{
+        bottom:0;
+        text-align: center;
+        background-image: linear-gradient(to bottom right, white, rgba(242, 147, 191, 0.6));
+        margin: auto;
+        display: block;
+        position:relative;
+    }
+  }
+  @media (min-width:650px) and (max-width: 1024px) {
+    body{
+      background-image: url('images/landingPageTablet.jpeg');
+    }
+    #aboutMeDiv{
+      background-color: rgba(255, 255, 255, 0.7);
+  }
+  #devJoke{
+    display:none;
+}
+  footer{
+    position: relative;
+  }
+}
+
+@media (min-width:2000px) and (max-width: 4000px)  {
+  body{
+    background-image: url('images/landingPageTablet.jpeg');
+  }
+  #devJoke{
+    display:none;
+}
+}
+

@@ -1,0 +1,225 @@
+body{
+    display:flex;
+    width:100%;
+    height:100%;
+    font-family: sans-serif;
+}
+#landingContainer{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:5%;
+} 
+#navAndLogoContainer{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+#goatCover{
+    margin-bottom:5%;
+    max-width:100%;
+    opacity: .8;
+}
+ .bannerTitle {
+    font-family: 'Tangerine', cursive;
+    font-size: 5.5em;
+    margin-top:28%;
+    font-weight:lighter;
+    position:absolute;
+    color:whitesmoke;
+ }
+ h4{
+    margin-top:37%;
+    font-weight:lighter;
+    position:absolute;
+    color:whitesmoke;
+    padding:1%;
+    border: solid 1px rgba(51, 161, 173, .5);
+    background-color:rgba(51, 161, 173, .7);
+ }
+#landingContainerTop{
+    display:Flex;
+    width:100%;
+    margin-bottom:5%;
+}
+
+/* Navbar section Below */
+
+.navbar {
+    display:flex;
+    width:50%;
+    justify-content: space-between;
+    align-items: center;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    white-space: nowrap;
+    font-size: 1.25em;
+    padding:.75%;
+  } 
+
+  /* Gives <a> element text color and removes underline */
+  .navbar a {
+    color: black;
+    text-decoration: none;
+    padding:.5em;
+  }
+
+  /* Removes premade styling and resizes button, sizes & colors the text*/
+  .dropButton{
+    font-size: 1em;
+    border: none;
+    outline: none;
+    color: black;
+    padding:.5em 1.25em;
+  }
+  /* Makes is so that when all items (except the dropdown a elements) change color when hovered over */
+  .navbar a:hover, .dropdown:hover .dropButton {
+    border-top: 2px solid rgba(51, 161, 173, .2);
+    color: rgba(51, 161, 173, .9);
+  }
+  
+  /* Hides dropdown menu until it's hovered over & prevents subnav from moving the whole nav bar spacing  */
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 253, 253);
+  }
+  /* When it hovers the text and background change color */
+  .dropdownContent a:hover {
+    /* background-color: green;
+    color:white; */
+    border-top: 1px solid rgba(51, 161, 173, .5);
+  }
+
+  /* Allows the drop down menu to be visible when hovered over  */
+  .dropdown:hover .dropdownContent {
+    display:flex;
+    flex-direction:column;
+  } 
+
+  /* End of Nav Bar CSS */
+
+
+#landingSubContainer1{
+    display:flex;
+    width:50%;
+    background-image: url('images/crafting1.jpg');
+    background-position: center;
+    background-size:cover;
+    margin-right:2.5%;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center; 
+}
+#landingSubContainer2{
+    display:flex;
+    width:50%;
+    background-image: url('images/aboutImg.jpg');
+    background-position: center;
+    background-size:cover;
+    margin-left:2.5%;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;   
+}
+#landingContainerBottom{
+    display:Flex;
+    width:100%;
+}
+#landingSubContainer3{
+    display:flex;
+    width:50%;
+    background-image: url('images/aboutImg.jpg');
+    background-position: center;
+    background-size:cover;
+    margin-right:2.5%;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;   
+}
+#landingSubContainer4{
+    display:flex;
+    width:50%;
+    background-image: url('images/aboutImg.jpg');
+    background-position: center;
+    background-size:cover;
+    margin-left:2.5%;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center; 
+}
+.landingFont1, .landingFont2{
+    color: white;
+}
+.landingFont1{
+    margin-top:25%;
+    margin-bottom:0;
+}
+.landingFont2{
+    margin-top:0;
+    margin-bottom:25%;
+    font-weight: lighter;
+}
+.socialMediaImages{
+    max-width:200px;
+    max-height:200px;
+}
+#socialMediaContainer{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+}
+div + p{
+    font-weight: bolder;
+    margin: 5% auto 2.5% auto;
+}
+hr.bottomLine{
+    width:100%;
+    border-top: 1px solid rgba(51, 161, 173, .8);
+    margin-top:5%;
+}
+
+/* CONTACT US PAGE CSS */
+#formBackground{
+    margin-top:5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/fakeGoat4.jpg'images/aboutImg.jpg'");
+    padding:10%;
+    width:75%;
+    border:10px double rgba(211, 211, 211, 0.2);
+}
+#formContainer{
+    background-image:linear-gradient(rgb(58, 58, 58), rgb(94, 94, 94));
+    padding:5%;
+    color:whitesmoke;
+    border:5px double rgba(44, 63, 44, 0.5);
+}
+fieldset{
+    padding-left:2.5%;
+}
+fieldset p{
+    margin-top:5%;
+    margin-bottom:.5%;
+    padding:0;
+}
+fieldset:nth-child(2), fieldset:nth-child(3){
+    margin-top: 15%;
+}
+legend{
+    border: none;
+}
+input:text{
+    width:50%;
+}
+form[type^="submit"]{
+    font-size: 3em;
+    border: none;
+    outline: none;
+    color: white;
+}
+div > h1{
+    color:green;
+    font-weight:lighter;
+}
