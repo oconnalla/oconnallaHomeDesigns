@@ -70,3 +70,17 @@ elSmall.innerHTML=subBanner;
 //   resultSum.value = sum;
 // };
 
+$( function() {
+  $( "input" ).checkboxradio();
+} ); 
+
+var $subFunc = $("#contactButton").click(function(){
+        var confirmed = document.getElementById('confirmation');
+        var confirmedText = '<h1>Thanks, we\'ll get back to you shortly\!</h1>';
+        confirmed.innerHTML = confirmedText;
+});
+$("#contactButton").click(function(e) {
+    e.preventDefault();
+    $subFunc();
+});
+
