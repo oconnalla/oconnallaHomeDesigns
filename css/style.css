@@ -496,12 +496,14 @@ fieldset > textarea{
 .product-image {
 	margin: 2em auto 1em auto;
 	background: white;
-	width: 200px;
-	height: 200px;
+	/* width: 40%;
+    height: 40%; */
+    width:200px;
+    height:200px;
 	overflow: hidden;
     border-radius: 50%;
     border:1px solid rgb(255,183,177);
-	
+    object-fit:contain;
 }
 
 .product-description {
