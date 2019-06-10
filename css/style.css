@@ -51,6 +51,7 @@ body{
     outline: none;
     color: black;
     padding:.5em 1.25em;
+    background-color:white;
   }
   /* Makes is so that when all items (except the dropdown a elements) change color when hovered over */
   .navbar a:hover, .dropdown:hover .dropButton {
