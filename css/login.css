@@ -1,0 +1,198 @@
+/* LOGIN PAGE CSS */ 
+
+
+/* conrols modal page */
+#id01{
+  display:block;
+  width:100%;
+  margin:auto;
+}
+
+/* controls welcome "username" */
+script + h1{
+  margin:0;
+  padding:0;
+}
+/* controls white box containing addresses and orders */
+#loginContent{
+  display:flex;
+  flex-direction:column;
+  margin-top:1em;
+  background-color:white;
+  color:rgb(84, 83, 83);
+  font-size:1.25em;
+  border: 6px solid rgba(255,183,177,.7);
+}
+
+#centerProfileText{
+  width:100%;
+}
+#centerProfileText h1{
+  margin:0% 0% 0% 2.5%;
+  padding-bottom:0;
+}
+#loginContainer{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  font-weight:lighter;
+}
+a[href^="#blank"]{
+  text-decoration:none;
+  color:white; 
+  text-align: center;
+  margin: 3em 0em 0em 3em;
+  padding:0;
+  font-size:1.25em;
+  border-bottom:1px solid rgba(255, 255, 255, 0.604);
+}
+a[href^="#blank"]:hover{
+  color:rgba(255,183,177,.7);
+}
+ .viewAgainImg{
+  width:100%;
+  border:solid 5px rgba(255,183,177,.7);
+}
+.viewAgainImg:hover{
+  background-color:white;
+}
+
+/* controls paragraphs inside the content box, ex:addresses and orders */
+#loginContent p{
+  padding:2.5% 0% 2.5% 2.5%;
+}
+
+/* causes p tags effects on hover */
+#loginContent p:hover{
+  color:rgba(255,183,177,.8);
+}
+
+
+
+/* The Modal Section CSS */
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button[type^="submit"] {
+  background-color: rgba(255,183,177,.8);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: rgba(51, 161, 173, .8);
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#calculate{
+  padding: 1% 2%;
+  color:white;
+  font-size:1em;
+  background-color:rgba(255,183,177,.8);
+}
+
+.close:hover,
+.close:focus {
+  color: rgba(51, 161, 173, .8);
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}

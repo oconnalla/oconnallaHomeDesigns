@@ -1,175 +1,148 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>login</title>
+        <link rel="icon" type="image/jpeg" href="images/logo.png" />
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">  
+  </head> 
+      <body>
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+          <div id="id01" class="modal">
+              <form class="modal-content animate" action="login.html">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <img src="images/logo.png" alt="Avatar" class="avatar">
+                </div>  <!--End of .imgcontainer-->
+      
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" name="value1" id="value1" placeholder="Enter Username" name="uname" required>
+      
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                    
+                  <button type="button" id="calculate" onclick="document.getElementById('id01').style.display='none'">Login</button>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+                </div> <!--End of .container-->
+      
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw">Forgot <a href="#">password?</a></span>
+                </div> <!--End of .container-->
+              </form>
+            </div><!--End of .modal-->
+      
+            <!-- JAVASCRIPT FOR MODAL PAGE -->
+            <script>
+              // Get the modal
+              var modal = document.getElementById('id01');
+            
+              // When the user clicks anywhere outside of the modal, close it
+              window.onclick = function(event) {
+                  if (event.target == modal) {
+                      modal.style.display = "none";
+                  }
+              }
+              window.onload = function () {
+      
+              var calcButton = document.getElementById('calculate');
+      
+              //bind event
+              calcButton.addEventListener('click', calcSum, false);
+      
+              //create calc sum function
+      
+              function calcSum(){
+                  //get user input for first value
+                  var value1Element = document.getElementById('value1');
+                  var value1 = (value1Element.value);
+      
+                  console.log(value1);
+                  console.log(typeof value1);
+                  //calculate sum 
+      
+                  var sum = 'Welcome, ' + value1;
+                  navSum = value1 +' &#128100;';
+                  var resultElement = document.getElementById('result');
+                  var navResult = document.getElementById('loginProfile');
 
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+                  //display the results
+                  resultElement.textContent = sum;
+                  navResult.innerHTML = navSum;
+              }
+            }       
+          </script>
 
-button:hover {
-  opacity: 0.8;
-}
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
+      <div id="landingContainer">
+        <div id="navAndLogoContainer">
+            <img id="Logo" src="images/logo.png" alt="Logo">
+            <div class="navbar">
+              <a href="home.html">Home</a>
+              <div class="dropdown">
+                <button class="dropButton">Shop
+                </button>
+                <div class="dropdownContent">
+                  <a href="product.html">General Decor</a>
+                  <a href="product.html">Wreaths</a>
+                </div>
+              </div>
+              <a href="about.html">About Us</a>
+              <a href="contact.html">Contact Us</a>
+              <a id="loginProfile"href="login.html">Login &#128100;</a>
+              <a href="cart.html">Cart &#128722;</a>  
+            </div><!--End of .navbar-->
+        </div> <!--End of #navAndLogoContainer-->
+        <div id='landingBanner'>
+            <h2 class="bannerTitle" id="mainBannerTitle">Spring Is Here!</h2>
+            <h4 id="subBannerTitle">Shop Our Collection ></h4>
+        </div> <!--End of .bannerTitle-->
+       
 
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
+      <!-- HTML FOR LOGIN PAGE AFTER MODAL LOGIN -->
 
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
-</head>
-<body>
-
-<h2>Modal Login Form</h2>
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <h1 id="result" >Welcome, UserName</h1>
+      <div id="formBackground">
+          <div id="formContainer">
         
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
+            <div id=loginContainer>
+              <div id="centerProfileText">
+                  <h1>Your Profile
+                  </h1>
+                  <div id = "loginContent">
+                    <p>Your Order History</p>
+                    <p>Favorites</p>
+                    <p>Saved Addresses</p>
+                    <p>Account Settings</p>
+                    <p>Notifications</p>
+                    <p>Suggestions</p>
+                  </div><!--End of #loginContent-->
+              </div><!--End of #centerProfileText-->
+                <a href=#blank><img class="viewAgainImg" src="images/loginImg.jpg" alt="liked Image"><br>View It Again</a>
+            </div> <!--End of #loginContainer-->
+            </div><!--End of #formContainer-->
+        </div> <!--End of #formBackground-->
+        <hr class="bottomLine">
+    <footer>
+        <p>&copy; Mock Copyright 2019, Ariel OConnall, All Rights Reserved </p>
+        <a href="#a">
+        <img class="socialMediaIcons" src="images/fb-icon.png" alt="Facebook">
+        Facebook</a>
+        
+        <a href="#a">
+        <img class="socialMediaIcons" src="images/insta-icon.png" alt="Instagram">
+        Instagram</a>
+        
+        <a href="contact.html"><img class="socialMediaIcons" src="images/mail-icon.png" alt="email"> Contact Us</a>
+    </footer>
+  </div> <!-- end of #landingContainer -->
+  <script type="text/javascript" src="js/banner.js"></script>
 </body>
 </html>

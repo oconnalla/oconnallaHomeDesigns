@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.shop.js"></script>
+</head>
+
+<body id="checkout-page">
+
+				<div id="landingContainer">
+					<div id="navAndLogoContainer">
+						<img id="Logo" src="images/logo.png" alt="Logo">
+						<div class="navbar">
+								<a href="home.html">Home</a>
+								<div class="dropdown">
+									<button class="dropButton">Shop
+									</button>
+								  <div class="dropdownContent">
+									<a href="product.html">General Decor</a>
+									<a href="product.html">Wreaths</a>
+								  </div>
+								</div>
+								<a href="about.html">About Us</a>
+								<a href="contact.html">Contact Us</a>
+								<a href="login.html">Log In &#128100;</a>
+								<a href="cart.html">Cart &#128722;</a>  
+							  </div>
+					</div>
+					<div id='landingBanner'>
+						<h2 class="bannerTitle" id="mainBannerTitle">Spring Is Here!</h2>
+						<h4 id="subBannerTitle">Shop Our Collection ></h4>
+					</div>
+<div id="site">
+	
+	<div id="content">
+		<h1>Your Order</h1>
+			<table id="checkout-cart" class="shopping-cart">
+			  <thead>
+				<tr>
+					<th scope="col">Item</th>
+					<th scope="col">Qty</th>
+					<th scope="col">Price</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  
+			  </tbody>
+			</table>
+		 <div id="pricing">
+			
+			<p id="shipping">
+				<strong>Shipping</strong>: <span id="sshipping"></span>
+			</p>
+			
+			<p id="sub-total">
+				<strong>Total</strong>: <span id="stotal"></span>
+			</p>
+		 </div>
+		 
+		 <div id="user-details">
+		 	<h2>Your Data</h2>
+		 	<div id="user-details-content"></div>
+		 </div>
+		 
+		 
+		 
+		 
+<form id="paypal-form" action="" method="post">
+	<input type="hidden" name="cmd" value="_cart" />
+	<input type="hidden" name="upload" value="1" />
+	<input type="hidden" name="business" value="" />
+        
+	<input type="hidden" name="currency_code" value="" />
+	<input type="submit" id="paypal-btn" class="btn" value="Pay with PayPal" />
+</form>
+		 
+		 
+	</div>
+	
+	
+
+	</div>
+	<hr class="bottomLine">
+	<footer>
+		<p>&copy; Mock Copyright 2019, Ariel OConnall, All Rights Reserved </p>
+		<a href="#a">
+		<img class="socialMediaIcons" src="images/fb-icon.png" alt="Facebook">
+		Facebook</a>
+		
+		<a href="#a">
+		<img class="socialMediaIcons" src="images/insta-icon.png" alt="Instagram">
+		Instagram</a>
+		
+		<a href="contact.html"><img class="socialMediaIcons" src="images/mail-icon.png" alt="email"> Contact Us</a>
+	</footer>
+	</div>
+	<script type="text/javascript" src="js/banner.js"></script> 
+</body>
+</html>

@@ -1,48 +1,599 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8" />
+<title>Products</title>
+<link rel="icon" type="image/jpeg" href="logo.png" />
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.shop.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
 <style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
+	#site{
+		width:100%;
+		padding:0;
+		/* margin:5% */
+	}
+	element.style{
+		max-height:100%;
+	}
+	#formBackground{
+		padding:2%;
+		width:94%;
+	}
+/* .ui-accordion-content{
+	background-image:linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255,.95)),url('images/insta6.jpg');
+} */
+
+.ui-state-default{
+	background-color:rgb(255,183,177);
+	border:1px solid rgb(255,183,177);
+	border-radius: 0;
+	color:white;
+}
+.ui-accordion .ui-accordion-header {
+	font-size:1.5em;
+}
+/* makes select briefly flash teal when selected */
+.ui-state-default:active{
+	background-color:rgba(51, 161, 173, .7);
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+	border:none;
+	color:black;
+}
+#content{
+	display:flex;
+	min-width:100%;
+	justify-content: center;
+	padding:0;
+	align-items: stretch;
+}
+#products ul{
+	display:flex;
+	justify-content: center;
+	flex-wrap:wrap;
+	list-style: none;
+	overflow: hidden;
+	padding:0;	
+}
+#products ul:first-of-type{
+	margin-bottom:7.5%;
+}
+#products li{
+	/* display:flex; */
+	background-color:rgb(225, 224, 224);
+	max-height:500px;
+	font-weight:lighter;
+	width: 40%;
+	margin:5%;
 }
 
-.price {
-  color: grey;
-  font-size: 22px;
-}
 
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-}
 </style>
-</head>
+
+
 <body>
+	<div id="landingContainer">
+		<div id="navAndLogoContainer">
+			<img id="Logo" src="images/logo.png" alt="Logo">
+			<div class="navbar">
+				<a href="home.html">Home</a>
+				<div class="dropdown">
+					<button class="dropButton">Shop
+					</button>
+					<div class="dropdownContent">
+						<a href="product.html">General Decor</a>
+						<a href="product.html#wreathLink">Wreaths</a>
+					</div>
+				</div>
+				<a href="about.html">About Us</a>
+				<a href="contact.html">Contact Us</a>
+				<a href="login.html">Log In &#128100;</a>
+				<a href="cart.html">Cart &#128722;</a>  
+			</div> <!--End of navbar div-->
+		</div>
+		<div id='landingBanner'>
+			<h2 class="bannerTitle" id="mainBannerTitle">Spring Is Here!</h2>
+			<h4 id="subBannerTitle">Shop Our Collection ></h4>
+		</div>
+		<h1>Products</h1>
+		<div id="formBackground">
+			<div id="site">
+				<!-- SAVING IN CASE I WANT TO ADD TEXT CONTENT LATER -->
+				<!-- <header id="masthead">
+					<h1>Winery <span class="tagline">Wines for web developers since 1999</h1>
+				</header> -->
+		
+		<div id="accordion">
+			<h3>General Decor</h3>
+			<div> <!--required div for jquery accordian -->
+				<div id="content">  <!--required div for jquery cart plugin -->
+					<div id="products"> <!--required div for jquery cart plugin -->
+						<ul>
+							<!-- New General Decor Product 001-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine1.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Festive Pinecones" data-price="15">
+									<h3 class="product-name">Festive Pinecones</h3>
+									<p class="product-price">$15</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-1">Quantity</label>
+											<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li>
+							<!-- New General Decor Product 002-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine2.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Maize Wreath" data-price="60">
+									<h3 class="product-name">Maize Wreath</h3>
+									<p class="product-price">$60</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-2">Quantity</label>
+											<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li>
 
-<h2 style="text-align:center">Product Card</h2>
+							<!-- New General Decor Product 003-->
+							<li>
+									<div class="product-image">
+										<img src="images/wine2.jpg" alt="" />
+									</div>
+									<div class="product-description" data-name="Handblown Floral Easter Eggs" data-price="20">
+										<h3 class="product-name">Handblown Floral Easter Eggs</h3>
+										<p class="product-price">$20</p>
+										<form class="add-to-cart" action="cart.html" method="post">
+											<div>
+												<label for="qty-2">Quantity</label>
+												<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+											</div>
+											<p><input type="submit" value="Add to cart" class="btn" /></p>
+										</form>
+									</div>
+								</li>
 
-<div class="card">
-  <img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
-  <h1>Tailored Jeans</h1>
-  <p class="price">$19.99</p>
-  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-  <p><button>Add to Cart</button></p>
-</div>
+								<!-- New General Decor Product 004-->
+							<li>
+									<div class="product-image">
+										<img src="images/wine2.jpg" alt="" />
+									</div>
+									<div class="product-description" data-name="Cookie Cutter Wreath" data-price="60">
+										<h3 class="product-name">Cookie Cutter Wreath</h3>
+										<p class="product-price">$60</p>
+										<form class="add-to-cart" action="cart.html" method="post">
+											<div>
+												<label for="qty-2">Quantity</label>
+												<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+											</div>
+											<p><input type="submit" value="Add to cart" class="btn" /></p>
+										</form>
+									</div>
+								</li>
 
+							<!-- New General Decor Product 005-->
+							<li>
+									<div class="product-image">
+										<img src="images/wine2.jpg" alt="" />
+									</div>
+									<div class="product-description" data-name="Handblown Marbled Easter Eggs" data-price="20">
+										<h3 class="product-name">Handblown Marbled Easter Eggs</h3>
+										<p class="product-price">$20</p>
+										<form class="add-to-cart" action="cart.html" method="post">
+											<div>
+												<label for="qty-2">Quantity</label>
+												<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+											</div>
+											<p><input type="submit" value="Add to cart" class="btn" /></p>
+										</form>
+									</div>
+								</li>
+
+							<!-- New General Decor Product 006-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine3.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Spring Umbrella" data-price="60">
+									<h3 class="product-name">Spring Umbrella</h3>
+									<p class="product-price">$60</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-3">Quantity</label>
+											<input type="text" name="qty-3" id="qty-3" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li> <!-- End of General Decor Product List Item-->
+						</ul><!-- End of General Decor Product List -->
+					</div> <!--end of products required div for jquery cart plugin -->
+				</div> <!--end of content required div for jquery cart plugin -->
+			</div>	<!-- end of div containing accordian content -->
+
+
+			<h3>Winter Wreaths</h3>
+			<div id="wreathLink" name="wreathLink"> <!--required div for jquery accordian -->
+				<div id="content">  <!--required div for jquery cart plugin -->
+					<div id="products"> <!--required div for jquery cart plugin -->
+						<ul>
+							<!-- New Winter Wreath Product 100-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine1.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Ornament Wreath" data-price="55">
+									<h3 class="product-name">Ornament Wreath</h3>
+									<p class="product-price">$55</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-1">Quantity</label>
+											<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li>
+							<!-- New Winter Wreath Product 101-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine2.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Holiday Signature" data-price="55">
+									<h3 class="product-name">Holiday Signature</h3>
+									<p class="product-price">$55</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-2">Quantity</label>
+											<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li>
+
+							<!-- New Winter Wreath Product 102-->
+							<li>
+									<div class="product-image">
+										<img src="images/wine2.jpg" alt="" />
+									</div>
+									<div class="product-description" data-name="Burlap Holiday" data-price="45">
+										<h3 class="product-name">Burlap Holiday</h3>
+										<p class="product-price">$45</p>
+										<form class="add-to-cart" action="cart.html" method="post">
+											<div>
+												<label for="qty-2">Quantity</label>
+												<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+											</div>
+											<p><input type="submit" value="Add to cart" class="btn" /></p>
+										</form>
+									</div>
+								</li>
+
+							<!-- New Winter Wreath Product 103-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine3.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Dangle Ornament" data-price="60">
+									<h3 class="product-name">Dangle Ornament</h3>
+									<p class="product-price">$60</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-3">Quantity</label>
+											<input type="text" name="qty-3" id="qty-3" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li> <!-- End of Winter Wreath Product List  Item-->
+						</ul><!-- End of Winter Wreath Product List -->
+					</div> <!--end of products required div for jquery cart plugin -->
+				</div> <!--end of content required div for jquery cart plugin -->
+			</div>	<!-- end of div containing accordian content -->
+
+			<h3>Spring Wreaths</h3>
+			<div> <!--required div for jquery accordian -->
+				<div id="content">  <!--required div for jquery cart plugin -->
+					<div id="products"> <!--required div for jquery cart plugin -->
+						<ul>
+							<!-- New Spring Wreath Product 200-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine1.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Home Sweet Home" data-price="55">
+									<h3 class="product-name">Home Sweet Home</h3>
+									<p class="product-price">$55</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-1">Quantity</label>
+											<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li>
+
+							<!-- New Spring Wreath Product 201-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine1.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Tulip Treat" data-price="45">
+									<h3 class="product-name">Tulip Treat</h3>
+									<p class="product-price">$45</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-1">Quantity</label>
+											<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li>
+
+							<!-- New Spring Wreath Product 202-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine2.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Burlap Beauty" data-price="55">
+									<h3 class="product-name">Burlap Beauty</h3>
+									<p class="product-price">$55</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-2">Quantity</label>
+											<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li>
+							<!-- New Spring WreathProduct 203-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine3.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Floral Spring" data-price="45">
+									<h3 class="product-name">Floral Spring</h3>
+									<p class="product-price">$45</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-3">Quantity</label>
+											<input type="text" name="qty-3" id="qty-3" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li> <!-- End of Spring Product List Item-->
+						</ul><!-- End of Spring Product List -->
+					</div> <!--end of products required div for jquery cart plugin -->
+				</div> <!--end of content required div for jquery cart plugin -->
+			</div>	<!-- end of div containing accordian content -->
+
+			<h3>Summer Wreaths</h3>
+			<div> <!--required div for jquery accordian -->
+				<div id="content">  <!--required div for jquery cart plugin -->
+					<div id="products"> <!--required div for jquery cart plugin -->
+						<ul>
+							<!-- New Summer Wreath Product 300-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine1.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Citrus Sensation" data-price="65">
+									<h3 class="product-name">Citrus Sensation</h3>
+									<p class="product-price">$65</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-1">Quantity</label>
+											<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li>
+
+							<!-- New Summer Wreath Product 301-->
+							<li>
+									<div class="product-image">
+										<img src="images/wine2.jpg" alt="" />
+									</div>
+									<div class="product-description" data-name="Signature Select" data-price="55">
+										<h3 class="product-name">Signature Select</h3>
+										<p class="product-price">$55</p>
+										<form class="add-to-cart" action="cart.html" method="post">
+											<div>
+												<label for="qty-2">Quantity</label>
+												<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+											</div>
+											<p><input type="submit" value="Add to cart" class="btn" /></p>
+										</form>
+									</div>
+								</li>
+
+							<!-- New Summer Wreath Product 302-->
+							<li>
+								<div class="product-image">
+									<img src="images/wine2.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Signature Wheat" data-price="55">
+									<h3 class="product-name">Signature Wheat</h3>
+									<p class="product-price">$55</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-2">Quantity</label>
+											<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li>
+							<!-- New Summer Wreath Product 303 -->
+							<li>
+								<div class="product-image">
+									<img src="images/wine3.jpg" alt="" />
+								</div>
+								<div class="product-description" data-name="Pretty in Pink" data-price="45">
+									<h3 class="product-name">Pretty in Pink</h3>
+									<p class="product-price">$45</p>
+									<form class="add-to-cart" action="cart.html" method="post">
+										<div>
+											<label for="qty-3">Quantity</label>
+											<input type="text" name="qty-3" id="qty-3" class="qty" value="1" />
+										</div>
+										<p><input type="submit" value="Add to cart" class="btn" /></p>
+									</form>
+								</div>
+							</li> <!-- End of Summer Product List Item-->
+						</ul><!-- End of Summer Product List -->
+					</div> <!--end of products required div for jquery cart plugin -->
+				</div> <!--end of content required div for jquery cart plugin -->
+			</div>	<!-- end of div containing accordian content -->
+
+			<h3>Fall Wreaths</h3>
+			<div> <!--required div for jquery accordian -->
+				<div id="content">  <!--required div for jquery cart plugin -->
+					<div id="products"> <!--required div for jquery cart plugin -->
+						<ul>
+							<!-- New Fall Wreath Product 400-->
+											<li>
+												<div class="product-image">
+													<img src="images/wine1.jpg" alt="" />
+												</div>
+												<div class="product-description" data-name="Sunflower Burlap" data-price="45">
+													<h3 class="product-name">Sunflower Burlap</h3>
+													<p class="product-price">$45</p>
+													<form class="add-to-cart" action="cart.html" method="post">
+														<div>
+															<label for="qty-1">Quantity</label>
+															<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+														</div>
+														<p><input type="submit" value="Add to cart" class="btn" /></p>
+													</form>
+												</div>
+											</li>
+										
+
+							<!-- New Fall Wreath Product 401-->
+							
+										<li>
+											<div class="product-image">
+												<img src="images/wine1.jpg" alt="" />
+											</div>
+											<div class="product-description" data-name="Pumpkin Dou" data-price="50">
+												<h3 class="product-name">Pumpkin Dou</h3>
+												<p class="product-price">$50</p>
+												<form class="add-to-cart" action="cart.html" method="post">
+													<div>
+														<label for="qty-1">Quantity</label>
+														<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+													</div>
+													<p><input type="submit" value="Add to cart" class="btn" /></p>
+												</form>
+											</div>
+										</li>
+									
+							<!-- New Fall Wreath Product 402-->
+							
+										<li>
+											<div class="product-image">
+												<img src="images/wine2.jpg" alt="" />
+											</div>
+											<div class="product-description" data-name="Great Pumpkin" data-price="45">
+												<h3 class="product-name">Great Pumpkin</h3>
+												<p class="product-price">$45</p>
+												<form class="add-to-cart" action="cart.html" method="post">
+													<div>
+														<label for="qty-2">Quantity</label>
+														<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
+													</div>
+													<p><input type="submit" value="Add to cart" class="btn" /></p>
+												</form>
+											</div>
+										</li>
+									
+
+							<!-- New Fall Wreath Product 403-->
+						
+										<li>
+											<div class="product-image">
+												<img src="images/wine3.jpg" alt="" />
+											</div>
+											<div class="product-description" data-name="Autumn's Hoop" data-price="40">
+												<h3 class="product-name">Autumn's Hoop</h3>
+												<p class="product-price">$40</p>
+												<form class="add-to-cart" action="cart.html" method="post">
+													<div>
+														<label for="qty-3">Quantity</label>
+														<input type="text" name="qty-3" id="qty-3" class="qty" value="1" />
+													</div>
+													<p><input type="submit" value="Add to cart" class="btn" /></p>
+												</form>
+											</div>
+									
+						</ul><!-- End of Fall Product List -->
+			
+					</div> <!--end of products required div for jquery cart plugin -->
+				</div> <!--end of content required div for jquery cart plugin -->
+			</div>	<!-- end of div containing accordian content -->
+		</div>	<!-- end of accordian div -->
+	</div> 	<!-- end of #site div -->
+</div><!-- end of formBackground div -->
+
+
+	<!--accordian javascript on products page -->
+	<script type="text/javascript">
+		$( function() {
+		  $( "#accordion" ).accordion({
+			collapsible: true
+		  });
+		} );
+
+	//cart javascript on products page
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36251023-1']);
+		_gaq.push(['_setDomainName', 'jqueryscript.net']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	 <hr class="bottomLine">
+	<footer>
+			<p>&copy; Mock Copyright 2019, Ariel OConnall, All Rights Reserved </p>
+			<a href="#a">
+			<img class="socialMediaIcons" src="images/fb-icon.png" alt="Facebook">
+			Facebook</a>
+			
+			<a href="#a">
+			<img class="socialMediaIcons" src="images/insta-icon.png" alt="Instagram">
+			Instagram</a>
+			
+			<a href="contact.html"><img class="socialMediaIcons" src="images/mail-icon.png" alt="email"> Contact Us</a>
+		</footer>
+	  </div> <!-- end of #landingContainer -->
+	  <script type="text/javascript" src="js/banner.js"></script>
 </body>
-</html>
+</html>	

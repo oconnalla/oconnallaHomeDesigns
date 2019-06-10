@@ -4,30 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.png" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> 
+    <style>
+    input:invalid{
+        background-image: linear-gradient(to right,white,rgb(255,183,177));
+    }</style>
 </head>
-<body>
+    <body>
         <div id="landingContainer">
-                <div id="navAndLogoContainer"
-                    ><img id="FarmLogo" src="images/logoOption2.png" alt="SunnySide Up Logo">
-                    <div class="navbar">
-                            <a href="index.html">Home</a>
-                            <a href="about.html">About Our Farm</a>
-                            <a href="product.html">Shop</a>
-                            <div class="dropdown">
-                                <button class="dropButton">Our Animals 
-                                </button>
-                              <div class="dropdownContent">
-                                <a href="dames.html">Our Dames</a>
-                                <a href="sires.html">Our Sires</a>
-                                <a href="chickens.html">Our Chickens</a>
-                                <a href="forSale.html">Goats For Sale</a>
-                              </div>
-                            </div>
-                            <a href="contact.html">Contact Us</a> 
+            <div id="navAndLogoContainer">
+                <img id="Logo" src="images/logo.png" alt="Logo">
+                <div class="navbar">
+                        <a href="home.html">Home</a>
+                        <div class="dropdown">
+                            <button class="dropButton">Shop
+                            </button>
+                          <div class="dropdownContent">
+                            <a href="product.html">General Decor</a>
+                            <a href="product.html">Wreaths</a>
                           </div>
-                </div>
+                        </div>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="login.html">Log In &#128100;</a>
+                        <a href="cart.html">Cart &#128722;</a>  
+                      </div>
+            </div>
+            <div id='landingBanner'>
+                <h2 class="bannerTitle" id="mainBannerTitle">Spring Is Here!</h2>
+                <h4 id="subBannerTitle">Shop Our Collection ></h4>
+            </div>
                 <h1>Contact Us</h1>
                 <div id="formBackground">
                     <div id="formContainer">
@@ -41,30 +54,65 @@
                             <fieldset>
                                 <legend>Info</legend>
                                     <p>First Name:</p>
-                                    <input type="text" name="firstname">
+                                    <input type="text" name="firstname" placeholder=" color will change entirely to white when input requirement has been met"required>
                                     <p>Last Name:</p>
-                                    <input type="text" name="lastname">
+                                    <input type="text" name="lastname" placeholder=" color will change entirely to white when input requirement has been met"required>
                                     <p>Email Address:</p>
-                                    <input type="email" name="email">
+                                    <input type="email" name="email" placeholder=" color will change entirely to white when input requirement has been met"required>
                             </fieldset>
-                            <fieldset>
-                                <legend>How did you hear about us?</legend>
-                                    <input type="radio" name="facebook" value="facebook" checked> Facebook<br>
-                                    <input type="radio" name="site" value="site"> This Site<br>
-                                    <input type="radio" name="market" value="market"> Farmer's Market<br>
-                                    <input type="radio" name="other" value="other"> Other<br>
-                            </fieldset>
+                            <div class="widget">
+                                <fieldset>
+                                    <legend>How did you hear about us?</legend>
+                                    <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                                    <label for="checkbox-1">Facebook</label><br>
+                                    <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                                    <label for="checkbox-2">This Site</label><br>
+                                    <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                                    <label for="checkbox-3">Farmer's Market</label><br>
+                                    <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                                    <label for="checkbox-4">Other</label>
+                                </fieldset>
+                            </div>
                         <fieldset> 
                             <legend>Comments</legend>
                                     <textarea name="Comments" cols="36" rows="4" placeholder="What did you need help with?" tabindex="60"></textarea>
                             </fieldset>
-                            <input type="submit" value="Submit">
+                            <input   id="contactButton"type="submit" value="Submit">
+                            <div id="confirmation"></div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
-
-    
+            <!-- The Modal -->
+            
+        <hr class="bottomLine">
+        <footer>
+            <p>&copy; Mock Copyright 2019, Ariel OConnall, All Rights Reserved </p>
+            <a href="#a">
+            <img class="socialMediaIcons" src="images/fb-icon.png" alt="Facebook">
+            Facebook</a>
+            
+            <a href="#a">
+            <img class="socialMediaIcons" src="images/insta-icon.png" alt="Instagram">
+            Instagram</a>
+            
+            <a href="contact.html"><img class="socialMediaIcons" src="images/mail-icon.png" alt="email"> Contact Us</a>
+        </footer>
+      </div> <!-- end of #landingContainer -->
+      <script type="text/javascript" src="js/banner.js"></script>
+      <script>
+            $( function() {
+              $( "input" ).checkboxradio();
+            } ); 
+            var $subFunc = $("#contactButton").click(function(){
+                    var confirmed = document.getElementById('confirmation');
+                    var confirmedText = '<h1>Thanks, we\'ll get back to you shortly\!</h1>';
+                    confirmed.innerHTML = confirmedText;
+        });
+            $("#contactButton").click(function(e) {
+                e.preventDefault();
+                $subFunc();
+            });
+    </script>          
 </body>
 </html>

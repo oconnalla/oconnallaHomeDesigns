@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -64,7 +64,8 @@
               
                         <div class="col-50">
                           <h3>Payment</h3>
-                          <label for="fname">Accepted Cards</label>
+                          <label for="fname">Accepted Cards 	
+                                &#128179;</label>
                           <div class="icon-container">
                             <i class="fa fa-cc-visa" style="color:navy;"></i>
                             <i class="fa fa-cc-amex" style="color:blue;"></i>
@@ -132,4 +133,92 @@
               </footer>
           </div>
       </body>
-  </html>
+  </html> -->
+  <!DOCTYPE html>
+<html>
+<head>
+<title>Cart</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.shop.js"></script>
+</head>
+
+<body>
+    <div id="landingContainer">
+        <div id="navAndLogoContainer">
+            <img id="Logo" src="images/logo.png" alt="Logo">
+            <div class="navbar">
+                    <a href="home.html">Home</a>
+                    <div class="dropdown">
+                        <button class="dropButton">Shop
+                        </button>
+                      <div class="dropdownContent">
+                        <a href="product.html">General Decor</a>
+                        <a href="product.html">Wreaths</a>
+                      </div>
+                    </div>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="login.html">Log In &#128100;</a>
+                    <a href="cart.html">Cart &#128722;</a>  
+                  </div>
+        </div>
+        <div id='landingBanner'>
+            <h2 class="bannerTitle" id="mainBannerTitle">Spring Is Here!</h2>
+            <h4 id="subBannerTitle">Shop Our Collection ></h4>
+        </div>
+<div id="site">
+	<div id="content">
+		<h1>Your Shopping Cart</h1>
+		<form id="shopping-cart" action="cart.html" method="post">
+			<table class="shopping-cart">
+			  <thead>
+				<tr>
+					<th scope="col">Item</th>
+					<th scope="col">Qty</th>
+					<th scope="col" colspan="2">Price</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  
+			  </tbody>
+			</table>
+			<p id="sub-total">
+				<strong>Sub Total</strong>: <span id="stotal"></span>
+			</p>
+			<ul id="shopping-cart-actions">
+				<li>
+					<input type="submit" name="update" id="update-cart" class="btn" value="Update Cart" />
+				</li>
+				<li>
+					<input type="submit" name="delete" id="empty-cart" class="btn" value="Empty Cart" />
+				</li>
+				<li>
+					<a href="product.html" class="btn">Continue Shopping</a>
+				</li>
+				<li>
+					<a href="checkout.html" class="btn">Go To Checkout</a>
+				</li>
+			</ul>
+		</form>
+	</div>
+
+</div>
+<hr class="bottomLine">
+<footer>
+    <p>&copy; Mock Copyright 2019, Ariel OConnall, All Rights Reserved </p>
+    <a href="#a">
+    <img class="socialMediaIcons" src="images/fb-icon.png" alt="Facebook">
+    Facebook</a>
+    
+    <a href="#a">
+    <img class="socialMediaIcons" src="images/insta-icon.png" alt="Instagram">
+    Instagram</a>
+    
+    <a href="contact.html"><img class="socialMediaIcons" src="images/mail-icon.png" alt="email"> Contact Us</a>
+</footer>
+</div> <!-- end of #landingContainer -->
+<script type="text/javascript" src="js/banner.js"></script> 
+</body>
+</html>	
