@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Products</title>
-<link rel="icon" type="image/jpeg" href="logo.png" />
+<link rel="icon" type="image/jpeg" href="images/logo.png" />
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
 <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 
 <style>
 	#site{
@@ -76,6 +75,9 @@
 	width: 40%;
 	margin:5%;
 }
+input[type="submit" i]:hover{
+		background-color:rgba(255,183,177,.5);
+	}
 </style>
 
 
@@ -313,7 +315,7 @@
 							<!-- New Spring Wreath Product 200-->
 							<li>
 								<div class="product-image">
-									<img src="images/wreath1jpg.jpg" alt="Home Sweet Home" />
+									<img src="images/home.jpg" alt="Home Sweet Home" />
 								</div>
 								<div class="product-description" data-name="Home Sweet Home" data-price="55">
 									<h3 class="product-name">Home Sweet Home</h3>
@@ -591,5 +593,12 @@
 		</footer>
 	  </div> <!-- end of #landingContainer -->
 	  <script type="text/javascript" src="js/banner.js"></script>
+	  <script>
+	  $("#accordion").accordion({ 
+
+heightStyle: "content" 
+
+});
+</script>
 </body>
 </html>	

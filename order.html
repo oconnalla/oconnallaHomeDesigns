@@ -2,10 +2,41 @@
 <html>
 <head>
 <title>Order</title>
+<link rel="icon" type="image/jpeg" href="images/logo.png" />
 <meta charset="utf-8" />
 <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.shop.js"></script>
+<style>
+	#background-content{
+		padding:2%;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/aboutImg.jpg);
+		border: 10px double rgba(211, 211, 211, 0.2);
+	}
+	#site{
+		padding:2%;
+		background-image:linear-gradient(to top,white,rgba(255,183,177,.95));
+	}
+	#user-details-content{
+		background-color:white;
+	}
+	#user-details > h2{
+		/* color:rgba(51, 161, 173, .7); */
+		color:white;
+		font-weight:lighter;
+	}
+	#content > h1, #checkout-order-form h2 {
+		/* color:rgba(51, 161, 173, .7); */
+		font-weight:lighter;
+		color:white;	
+	}
+	input[type="submit" i]{
+		border:2px solid white;
+	}
+	input[type="submit" i]:hover{
+		background-color:rgba(255,183,177,.5);
+	}
+</style>
 </head>
 
 <body id="checkout-page">
@@ -33,55 +64,57 @@
 						<h2 class="bannerTitle" id="mainBannerTitle">Spring Is Here!</h2>
 						<h4 id="subBannerTitle">Shop Our Collection ></h4>
 					</div>
-<div id="site">
-	
-	<div id="content">
-		<h1>Your Order</h1>
-			<table id="checkout-cart" class="shopping-cart">
-			  <thead>
-				<tr>
-					<th scope="col">Item</th>
-					<th scope="col">Qty</th>
-					<th scope="col">Price</th>
-				</tr>
-			  </thead>
-			  <tbody>
-			  
-			  </tbody>
-			</table>
-		 <div id="pricing">
-			
-			<p id="shipping">
-				<strong>Shipping</strong>: <span id="sshipping"></span>
-			</p>
-			
-			<p id="sub-total">
-				<strong>Total</strong>: <span id="stotal"></span>
-			</p>
-		 </div>
-		 
-		 <div id="user-details">
-		 	<h2>Your Data</h2>
-		 	<div id="user-details-content"></div>
-		 </div>
-		 
-		 
-		 
-		 
-<form id="paypal-form" action="" method="post">
-	<input type="hidden" name="cmd" value="_cart" />
-	<input type="hidden" name="upload" value="1" />
-	<input type="hidden" name="business" value="" />
-        
-	<input type="hidden" name="currency_code" value="" />
-	<input type="submit" id="paypal-btn" class="btn" value="Pay with PayPal" />
-</form>
-		 
-		 
-	</div>
-	
-	
+				<div id ="background-content">
+						<div id="site">
+						
+						<div id="content">
+							<h1>Your Order</h1>
+								<table id="checkout-cart" class="shopping-cart">
+								<thead>
+									<tr>
+										<th scope="col">Item</th>
+										<th scope="col">Qty</th>
+										<th scope="col">Price</th>
+									</tr>
+								</thead>
+								<tbody>
+								
+								</tbody>
+								</table>
+							<div id="pricing">
+								
+								<p id="shipping">
+									<strong>Shipping</strong>: <span id="sshipping"></span>
+								</p>
+								
+								<p id="sub-total">
+									<strong>Total</strong>: <span id="stotal"></span>
+								</p>
+							</div>
+							
+							<div id="user-details">
+								<h2>Your Data</h2>
+								<div id="user-details-content"></div>
+							</div>
+							
+							
+							
+							
+					<form id="paypal-form" action="" method="post">
+						<input type="hidden" name="cmd" value="_cart" />
+						<input type="hidden" name="upload" value="1" />
+						<input type="hidden" name="business" value="" />
+							
+						<input type="hidden" name="currency_code" value="" />
+						<input type="submit" id="paypal-btn" class="btn" value="Pay with PayPal" />
+					</form>
+							
+							
+						</div>
+						
+						
 
+	</div>
 	</div>
 	<hr class="bottomLine">
 	<footer>
