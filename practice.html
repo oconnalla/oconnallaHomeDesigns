@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Products</title>
+<link rel="icon" type="image/jpeg" href="images/logo.png" />
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.shop.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding-bottom:25%;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: lightgrey;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .product-description{
+      width:95%;
+  }
+  </style>
+</head>
+<body>
+	<div id="landingContainer">
+		<div id="navAndLogoContainer">
+			<img id="Logo" src="images/logo.png" alt="Logo">
+			<div class="navbar">
+				<a href="home.html">Home</a>
+				<div class="dropdown">
+					<button class="dropButton">Shop
+					</button>
+					<div class="dropdownContent">
+						<a href="product.html">General Decor</a>
+						<a href="product.html#wreathLink">Wreaths</a>
+					</div>
+				</div>
+				<a href="about.html">About Us</a>
+				<a href="contact.html">Contact Us</a>
+				<a href="login.html">Log In &#128100;</a>
+				<a href="cart.html">Cart &#128722;</a>  
+			</div> <!--End of navbar div-->
+		</div>
+		<div id='landingBanner'>
+			<h2 class="bannerTitle" id="mainBannerTitle">Spring Is Here!</h2>
+			<h4 id="subBannerTitle">Shop Our Collection ></h4>
+		</div>
+		<h1>Products</h1>
+		
+            
+                    <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        
+                        <div id="content"> 
+                             <!--required div for jquery cart plugin -->
+                            <div id="products"> 
+                                <!-- required div for jquery cart plugin -->
+                                
+                                
+                                <ul>
+                                    <!-- New General Decor Product 001-->
+                                    <li>
+                                        
+                                        <div class="product-description" data-name="Festive Pinecones" data-price="15">
+                                                <div class="product-image">
+                                                        <img src="images/pinecones.jpg" alt="festive pinecones" />
+                                                    </div>
+                                            <h3 class="product-name">Festive Pinecones</h3>
+                                            <p class="product-price">$15</p>
+                                            <form class="add-to-cart" action="cart.html" method="post">
+                                                <div>
+                                                    <label for="qty-1">Quantity</label>
+                                                    <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+                                                </div>
+                                                <p><input type="submit" value="Add to cart" class="btn" /></p>
+                                         
+                                        </div>
+                                    </li>
+                                    </ul>
+                                    </div>
+                                    </div>
+                      </div>
+                      <div class="flip-card-back">
+
+                                <div class="product-description" data-name="Festive Pinecones" data-price="15">
+                                        <div class="product-image">
+                                                <img src="images/pinecones.jpg" alt="festive pinecones" />
+                                            </div>
+                                    <h3 class="product-name">Festive Pinecones</h3>
+                                    <p class="product-price">$15</p>
+                                    <form class="add-to-cart" action="cart.html" method="post">
+                                        <div>
+                                            <label for="qty-1">Quantity</label>
+                                            <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+                                        </div>
+                                        <p><input type="submit" value="Add to cart" class="btn" /></p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                    <hr class="bottomLine">
+                    <footer>
+                            <p>&copy; Mock Copyright 2019, Ariel OConnall, All Rights Reserved </p>
+                            <a href="#a">
+                            <img class="socialMediaIcons" src="images/fb-icon.png" alt="Facebook">
+                            Facebook</a>
+                            
+                            <a href="#a">
+                            <img class="socialMediaIcons" src="images/insta-icon.png" alt="Instagram">
+                            Instagram</a>
+                            
+                            <a href="contact.html"><img class="socialMediaIcons" src="images/mail-icon.png" alt="email"> Contact Us</a>
+                        </footer>
+                      </div> <!-- end of #landingContainer -->
+                     
+                      
+                      
+                </body>
+                </html>	
+                
